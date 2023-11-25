@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vina Sans', sans-serif !important;
+    background: dimgray !important;
+
+}
+
+body>header>nav>div {
+    font-size: 25px !important;
+}
+
+body>main> {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+/*Trabjaamos sobbre el index*/
+.carrouselText {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+body>main>.viajar {
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue !important;
+    text-align: center;
+
+}
+
+/*Modificamos el button*/
+body>main .button1 {
+    padding: 6px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: black;
+    color: aliceblue;
+    transition: box-shadow 0.3s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+}
+
+/*Aplicamos hover al button*/
+body>main .button1:hover {
+    box-shadow: 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.09);
+    transition: transform 0.4s ease-in-out;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+
+}
+
+/*Aplicamos cambios a fotos*/
+
+/*Diseñamos el Grid de la seccion principal*/
+
+
+.tituloFotos {
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+}
+
+.tituloFotos:hover {
+    transform: scale(1.10);
+    transition: transform 0.4s ease-in-out;
+    color: rgb(61, 50, 28);
+}
+
+.grid {
+    text-align: center;
+    margin: 5px;
+    display: grid;
+    /*Se generan 3 columnas y fracciones*/
+    grid-template-columns: repeat(4, 1fr);
+    ;
+    /*Se generan 3 filas y se le da el tamaño*/
+    grid-template-rows: repeat(4, auto);
+    /*Espaciamos entre las grillas*/
+    /*Definimos las areas para modificarlas desde el ID*/
+    grid-template-areas:
+        "area1 area1 area2 area2"
+        "area1 area1 area2 area2"
+        "area3 area3 area4 area4"
+        "area3 area3 area4 area4";
+}
+
+.gridImg {
+    width: 100%;
+    height: auto;
+    border: 10px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+
+}
+
+.gridImg:hover {
+    transform: scale(1.03);
+    transition: transform 0.4s ease-in-out;
+
+}
+
+
+
+.area {
+    margin: 10px;
+}
+
+#area1 {
+    grid-area: area1;
+}
+
+#area2 {
+    grid-area: area2;
+}
+
+#area3 {
+    grid-area: area3;
+}
+
+#area4 {
+    grid-area: area4;
+}
+
+
+
+/* Aplicamos Media Querys para ser responsive */
+@media (max-width: 768px) {
+    .grid {
+        text-align: center;
+        margin: 5px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas:
+            "area1"
+            "area1"
+            "area2"
+            "area2"
+            "area3"
+            "area3"
+            "area4"
+            "area4";
+    }
+
+    .gridImg {
+        border-radius: 60px;
+    }
+}
+
+
+/*Aplicamos estilos al footer*/
+body>footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+body>footer>nav>div>a {
+    text-decoration: none;
+    text-align: center !important;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: aliceblue !important;
+
+}
+
+body>footer>nav>div>a:hover {
+    color: burlywood !important;
+
+}
+
+body>footer>nav>div>p {
+    text-align: center;
+    text-wrap: wrap;
+}
